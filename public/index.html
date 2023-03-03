@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="twoforms">
+            <form action="#" id="register" class="invisible">
+                <div class="formup">
+                    <label for="first_name">First name<sup><span style="font-size: x-small;">*</span></sup></label>
+                    <input type="text" name="first_name" id="first_name">
+                    <p id="invalid_firstname" class="invisible invalid"></p>
+                    <label for="last_name">Last name</label>
+                    <input type="text" name="last_name" id="last_name">
+                    <p id="invalid_lastname" class="invisible invalid"></p>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                    <label for="passconfirm">Confirm password</label>
+                    <p id="pass_match" class="invisible invalid"></p>
+                    <input type="password" name="passconfirm" id="passconfirm">
+                </div>
+                <button type="submit" class="mainbtn">Subscribe</button>
+            </form>
+            <form action="#" id="login">
+                <div class="formup">
+                    <label for="lusername">Username</label>
+                    <input type="text" name="username" id="lusername">
+                    <label for="lpassword">Password</label>
+                    <input type="password" name="password" id="lpassword">
+                </div>
+                
+                <button type="submit" class="mainbtn">Login</button>
+            </form>
+        </div>
+        <div id="insert">
+            <div id="left"></div>
+            <div id="right" class="faded2"></div>
+        </div>
+        <div id="switch">
+            <div id="switch_login" class="btn">Login</div>
+            <div id="switch_subscribe" class="btn faded">Subscribe</div>
+        </div>
+        <div id="result">
+        </div>
+
+        <script src="script.js"></script>
+    </div>
+
+</body>
+</html>
