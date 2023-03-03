@@ -9,9 +9,12 @@ const passconfirm = document.getElementById("passconfirm");
 const towforms = document.getElementById("twoforms");
 const invalidFirstName = document.getElementById("invalid_firstname");
 const invalidLastName = document.getElementById("invalid_lastname");
+const invalidUsername = document.getElementById("invalid_username");
 const nameinput = document.getElementById("first_name");
+const userNameInput = document.getElementById("username");
 const left = document.getElementById("left");
 const right = document.getElementById("right");
+
 
 const makeLoginVisible = () => {
     registerform.classList.add('invisible');
@@ -46,6 +49,8 @@ registerform.addEventListener("submit", register);
 passconfirm.addEventListener("click", removePassMatch);
 password.addEventListener("click", removePassMatch);
 
+userNameInput.addEventListener("input", checkUsername);
+
 function removePassMatch () {
     pass_match.classList.add('invisible');
 }
@@ -67,6 +72,25 @@ async function login (e) {
         console.log(err)
     }
     
+}
+let userList = [];
+
+getAllUsers()
+.then(
+    data => userList=data
+)
+
+async function checkUsername (e) {
+    const name = e.target.value;
+    // const userList = await getAllUsers();
+    // console.log(userList);
+    const ind = userList.findIndex(elt => elt.username === name);
+    if (ind != -1) {
+        invalidUsername.classList.remove('invisible');
+        invalidUsername.innerHTML = `Sorry, ${name} is occupied`
+    } else {
+        invalidUsername.classList.add('invisible');
+    }
 }
 
 function checkPassword(userdata) {
@@ -111,4 +135,10 @@ async function register (e) {
         }
     
     }
+}
+
+async function getAllUsers () {
+    const resp = await fetch("/users");
+    const users = await resp.json();
+    return users
 }
