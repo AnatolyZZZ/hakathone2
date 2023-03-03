@@ -73,20 +73,31 @@ form {
     border-left: 1px solid rgb(230, 230, 230);
     border-right: 1px solid rgb(230, 230, 230);
 }
-.faded2 {
-    border-bottom: 1px solid gray;
+.faded-left {
+    clip-path: inset(0px 0px 0px -10px) !important;
+}
+
+.faded-right {
+    clip-path: inset(0px -10px 0px 0px) !important;
 }
 
 #left, #right {
     width: 50%;
     height: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.75);
-    clip-path: inset(0px 0px -10px 0px);
+    /* clip-path: inset(0px 0px -10px 0px); */
+}
+#left {
+    clip-path: inset(0px 0px -10px -10px);
+}
+
+#right {
+    clip-path: inset(0px -10px -10px 0px);
 }
 
 #insert {
     width: 100%;
     display: flex;
-    box-shadow: 0 0 10px rgba(0,0,0,0.75);
-    clip-path: inset(0px -10px 0px -10px);
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.75);
+    clip-path: inset(0px -10px 0px -10px); */
 }
