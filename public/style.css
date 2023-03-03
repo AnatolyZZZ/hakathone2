@@ -9,9 +9,12 @@
 
 #twoforms {
     height: 290px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.75);
+    clip-path: inset(-10px -10px 0px -10px);
     border-left: 1px solid gray;
     border-top: 1px solid gray;
     border-right: 1px solid gray;
+    padding: 0px 10px;
 }
 
 #insert {
@@ -42,8 +45,10 @@ form {
     display: inline-block;
     text-align: center;
     border-left: 1px solid gray;
+    border-right: 1px solid rgb(230, 230, 230);
     border-bottom: 1px solid gray;
-    border-right: 1px solid gray;
+    box-shadow: 0 0 10px rgba(0,0,0,0.75);
+    clip-path: inset(0px -10px -10px -10px);
 }
 #switch {
     display: flex;
@@ -61,19 +66,29 @@ form {
     display: none;
 }
 .faded {
-    border: 0;
+    border-bottom: 1px solid rgb(230, 230, 230);
     color: gray;
+    box-shadow: 0 0 10px rgba(0,0,0,0.75);
+    clip-path: inset(0px 0px 0px 0px);
+    border-left: 1px solid rgb(230, 230, 230);
+    border-right: 1px solid rgb(230, 230, 230);
 }
 .faded2 {
     border-bottom: 1px solid gray;
+    box-shadow: 0 0 10px rgba(0,0,0,0.75);
+    clip-path: inset(0px 0px -10px 0px);
 }
 
 #left, #right {
     width: 50%;
     height: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.75);
+    clip-path: inset(0px 0px -10px 0px);
 }
 
 #insert {
     width: 100%;
     display: flex;
+    box-shadow: 0 0 10px rgba(0,0,0,0.75);
+    clip-path: inset(0px -10px 0px -10px);
 }

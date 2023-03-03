@@ -13,7 +13,13 @@ const getUserByName = (user)  => {
     .where({username : user.username})
 }
 
+const getAllUsernames = () => {
+    return db("users")
+    .select("username")
+}
+
 module.exports = {
     subscribe,
-    getUserByName
+    getUserByName,
+    getAllUsernames
 }

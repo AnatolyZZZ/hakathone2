@@ -1,4 +1,4 @@
-const {subscribe, getUserByName} = require('../modules/users.js');
+const {subscribe, getUserByName, getAllUsernames} = require('../modules/users.js');
 
 
 const _subscribe = async (req, res) => {
@@ -29,4 +29,9 @@ const _login = async (req, res) => {
     }
 }
 
-module.exports = {_subscribe, _login}
+const _getAllUsernames = async (req, res) => {
+    const usernames = await getAllUsernames();
+    res.json(usernames);
+}
+
+module.exports = {_subscribe, _login, _getAllUsernames}
