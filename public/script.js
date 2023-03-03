@@ -20,16 +20,16 @@ const makeLoginVisible = () => {
     registerform.classList.add('invisible');
     loginform.classList.remove('invisible');
     subscribe_btn.classList.add('faded');
-    right.classList.add('faded2');
-    left.classList.remove('faded2');
+    right.classList.remove('faded-right');
+    left.classList.add('faded-left');
     login_btn.classList.remove('faded');
 }
 const makeSubscribeVisible = () => {
     registerform.classList.remove('invisible');
     loginform.classList.add('invisible');
     subscribe_btn.classList.remove('faded');
-    left.classList.add('faded2');
-    right.classList.remove('faded2');
+    left.classList.remove('faded-left');
+    right.classList.add('faded-right');
     login_btn.classList.add('faded');
 }
 
