@@ -45,7 +45,7 @@ form {
     display: inline-block;
     text-align: center;
     border-left: 1px solid gray;
-    border-right: 1px solid rgb(230, 230, 230);
+    border-right: 1px solid gray;
     border-bottom: 1px solid gray;
     box-shadow: 0 0 10px rgba(0,0,0,0.75);
     clip-path: inset(0px -10px -10px -10px);
@@ -75,8 +75,6 @@ form {
 }
 .faded2 {
     border-bottom: 1px solid gray;
-    box-shadow: 0 0 10px rgba(0,0,0,0.75);
-    clip-path: inset(0px 0px -10px 0px);
 }
 
 #left, #right {

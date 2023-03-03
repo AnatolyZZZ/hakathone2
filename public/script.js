@@ -79,6 +79,9 @@ getAllUsers()
 .then(
     data => userList=data
 )
+.catch( 
+    (err) => {console.log(err);}
+)
 
 async function checkUsername (e) {
     const name = e.target.value;
