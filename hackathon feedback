@@ -1,0 +1,9 @@
+Login/Register page
+
+In this project you showed your understanding of the connection between front-end and back-end.
+You connected to the database well and your file structure is good.
+Let me know on slack if I misunderstood the code, but I noticed that you are sending the list of all of the users
+from your database into the front end and in the front end you are checking if a name is available or if the login credentials are correct.
+If this is the case it is a very dangerous practice because it will be easier to hack.
+All user authentication should be done in the back . You should not do it on the front end.
+Other than that, good job!
